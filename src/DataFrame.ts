@@ -5,6 +5,11 @@ class DataFrame {
     this.data = data;
   }
 
+  // Return the data as an array of objects.
+  getData(): Record<string, any>[] {
+    return this.data;
+  }
+
   // Display all the rows of the DataFrame.
   displayAll(): void {
     console.table(this.data);
