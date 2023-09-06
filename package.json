@@ -1,0 +1,28 @@
+{
+  "name": "data-processing",
+  "version": "1.0.0",
+  "description": "data processing nodejs and typescript assignment.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "tsc && node dist/index.js",
+    "run": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashwinsanghi/data-processing.git"
+  },
+  "keywords": [],
+  "author": "Yashwin Sanghi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashwinsanghi/data-processing/issues"
+  },
+  "homepage": "https://github.com/yashwinsanghi/data-processing#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "jest": "^29.6.4",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {}
+}
