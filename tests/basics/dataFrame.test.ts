@@ -1,5 +1,5 @@
 // AI Generated File
-import { DataFrame } from "../src/dataFrame"; // Make sure to import your DataFrame class.
+import { DataFrame } from "../../src/dataFrame"; // Make sure to import your DataFrame class.
 
 describe("DataFrame", () => {
   let testData: Record<string, any>[];

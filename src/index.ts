@@ -77,3 +77,147 @@ function calculateAverage(values: Record<string, any>[]): number {
   return sum === 0 ? 0 : sum / values.length;
 }
 console.log(myDataFrame.aggregate(["class", "gender"], calculateAverage));
+
+// Find the count of age of the dataframe
+console.log("\nFind the count of age of the dataframe\n");
+console.log(myDataFrame.count("age"));
+
+// Find the count of score of the dataframe
+console.log("\nFind the count of score of the dataframe\n");
+console.log(myDataFrame.count("score"));
+
+// Find the count of class of the dataframe
+console.log("\nFind the count of class of the dataframe\n");
+console.log(myDataFrame.count("class"));
+
+// Find the count of the complete dataframe
+console.log("\nFind the count of the complete dataframe\n");
+console.log(myDataFrame.count());
+
+// Find the sum of age of the dataframe
+console.log("\nFind the sum of age of the dataframe\n");
+console.log(myDataFrame.sum("age"));
+
+// Find the sum of score of the dataframe
+console.log("\nFind the sum of score of the dataframe\n");
+console.log(myDataFrame.sum("score"));
+
+// Find the sum of class of the dataframe
+console.log("\nFind the sum of class of the dataframe\n");
+console.log(myDataFrame.sum("class"));
+
+// Find the sum of the complete dataframe
+console.log("\nFind the sum of the complete dataframe\n");
+console.log(myDataFrame.sum());
+
+// Find the min age of the dataframe
+console.log("\nFind the min age of the dataframe\n");
+console.log(myDataFrame.min("age"));
+
+// Find the min score of the dataframe
+console.log("\nFind the min score of the dataframe\n");
+console.log(myDataFrame.min("score"));
+
+// Find the min class of the dataframe
+console.log("\nFind the min class of the dataframe\n");
+console.log(myDataFrame.min("class"));
+
+// Find the min of the complete dataframe
+console.log("\nFind the min of the complete dataframe\n");
+console.log(myDataFrame.min());
+
+// Find the max age of the dataframe
+console.log("\nFind the max age of the dataframe\n");
+console.log(myDataFrame.max("age"));
+
+// Find the max score of the dataframe
+console.log("\nFind the max score of the dataframe\n");
+console.log(myDataFrame.max("score"));
+
+// Find the max class of the dataframe
+console.log("\nFind the max class of the dataframe\n");
+console.log(myDataFrame.max("class"));
+
+// Find the max of the complete dataframe
+console.log("\nFind the max of the complete dataframe\n");
+console.log(myDataFrame.max());
+
+// Find the mean age of the dataframe
+console.log("\nFind the mean age of the dataframe\n");
+console.log(myDataFrame.mean("age"));
+
+// Find the mean score of the dataframe
+console.log("\nFind the mean score of the dataframe\n");
+console.log(myDataFrame.mean("score"));
+
+// Find the mean class of the dataframe
+console.log("\nFind the mean class of the dataframe\n");
+console.log(myDataFrame.mean("class"));
+
+// Find the mean of the complete dataframe
+console.log("\nFind the mean of the complete dataframe\n");
+console.log(myDataFrame.mean());
+
+// Find the median age of the dataframe
+console.log("\nFind the median age of the dataframe\n");
+console.log(myDataFrame.median("age"));
+
+// Find the median score of the dataframe
+console.log("\nFind the median score of the dataframe\n");
+console.log(myDataFrame.median("score"));
+
+// Find the median class of the dataframe
+console.log("\nFind the median class of the dataframe\n");
+console.log(myDataFrame.median("class"));
+
+// Find the median of the complete dataframe
+console.log("\nFind the median of the complete dataframe\n");
+console.log(myDataFrame.median());
+
+// Find the mode age of the dataframe
+console.log("\nFind the mode age of the dataframe\n");
+console.log(myDataFrame.mode("age"));
+
+// Find the mode score of the dataframe
+console.log("\nFind the mode score of the dataframe\n");
+console.log(myDataFrame.mode("score"));
+
+// Find the mode class of the dataframe
+console.log("\nFind the mode class of the dataframe\n");
+console.log(myDataFrame.mode("class"));
+
+// Find the mode of the complete dataframe
+console.log("\nFind the mode of the complete dataframe\n");
+console.log(myDataFrame.mode());
+
+// Find the variance age of the dataframe
+console.log("\nFind the variance age of the dataframe\n");
+console.log(myDataFrame.variance("age"));
+
+// Find the variance score of the dataframe
+console.log("\nFind the variance score of the dataframe\n");
+console.log(myDataFrame.variance("score"));
+
+// Find the variance class of the dataframe
+console.log("\nFind the variance class of the dataframe\n");
+console.log(myDataFrame.variance("class"));
+
+// Find the variance of the complete dataframe
+console.log("\nFind the variance of the complete dataframe\n");
+console.log(myDataFrame.variance());
+
+// Find the standard deviation age of the dataframe
+console.log("\nFind the standard deviation age of the dataframe\n");
+console.log(myDataFrame.standardDeviation("age"));
+
+// Find the standard deviation score of the dataframe
+console.log("\nFind the standard deviation score of the dataframe\n");
+console.log(myDataFrame.standardDeviation("score"));
+
+// Find the standard deviation class of the dataframe
+console.log("\nFind the standard deviation class of the dataframe\n");
+console.log(myDataFrame.standardDeviation("class"));
+
+// Find the standard deviation of the complete dataframe
+console.log("\nFind the standard deviation of the complete dataframe\n");
+console.log(myDataFrame.standardDeviation());
