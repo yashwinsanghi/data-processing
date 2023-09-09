@@ -1,5 +1,28 @@
 import { DataFrame } from "./dataFrame";
+import { FileHandler } from "./fileHandler/fileHandler";
 export { DataFrame } from "./dataFrame";
+
+const testJson = async () => {
+  try {
+    let jsonData = await new FileHandler().readJson("/dist/utf8.json");
+    const df = new DataFrame(jsonData);
+    console.log(df.getData());
+  } catch (err) {
+    console.log(err);
+  }
+};
+testJson();
+
+const testCsv = async () => {
+  try {
+    let csvData = await new FileHandler().readCsv("/tests/files/csv/utf8.csv");
+    const df = new DataFrame(csvData);
+    console.log(df.getData());
+  } catch (err) {
+    console.log(err);
+  }
+};
+testCsv();
 
 const myDataFrame = new DataFrame([
   { name: "Alice", class: "A", gender: "Female", score: 95, age: 25 },

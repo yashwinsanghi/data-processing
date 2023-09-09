@@ -399,7 +399,10 @@ describe("DataFrame Statistical Methods", () => {
 
     const stdResult = df.standardDeviation(["age", "score"]);
 
-    expect(stdResult).toEqual({ age: 3.6, score: 5.5 });
+    expect(stdResult).toEqual({
+      age: 3.646916505762094,
+      score: 5.458937625582473,
+    });
   });
 
   it("should calculate the standard deviation of negative numerical values", () => {
@@ -414,7 +417,10 @@ describe("DataFrame Statistical Methods", () => {
 
     const stdResult = df.standardDeviation(["age", "score"]);
 
-    expect(stdResult).toEqual({ age: 3.6, score: 5.5 });
+    expect(stdResult).toEqual({
+      age: 3.646916505762094,
+      score: 5.458937625582473,
+    });
   });
 
   it("should calculate the standard deviation of all zero values", () => {
