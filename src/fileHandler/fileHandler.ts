@@ -18,4 +18,12 @@ export class FileHandler {
   ): Promise<Record<string, any>[]> {
     return this.jsonHandler.readJson(filePath, acceptableFileSizeInBytes);
   }
+
+  writeCsv(jsonData: Record<string, any>[], filePath: string): Promise<void> {
+    return this.csvHandler.writeCsv(jsonData, filePath);
+  }
+
+  writeJson(jsonData: Record<string, any>[], filePath: string): Promise<void> {
+    return this.jsonHandler.writeJson(jsonData, filePath);
+  }
 }

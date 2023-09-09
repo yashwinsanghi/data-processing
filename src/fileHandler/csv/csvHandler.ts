@@ -91,4 +91,25 @@ export class CsvHandler {
       .on("end", () => resolve(data))
       .on("error", (err: Error) => reject(err));
   }
+
+  writeCsv(jsonData: Record<string, any>[], filePath: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const header = Object.keys(jsonData[0]);
+      const csvData = jsonData.map((row) => {
+        return header
+          .map((fieldName) => {
+            return JSON.stringify(row[fieldName] || "");
+          })
+          .join(",");
+      });
+      csvData.unshift(header.join(","));
+      fs.writeFile(filePath, csvData.join("\n"), (err) => {
+        if (err) {
+          reject(err);
+          return;
+        }
+        resolve();
+      });
+    });
+  }
 }

@@ -4,11 +4,13 @@ import {
   fetchDataTypeForGivenData,
   findKeysByValue,
 } from "./util";
+import { FileHandler } from "./fileHandler/fileHandler";
 
 export class DataFrame {
   private data: Record<string, any>[] = [];
   private statisticsOperationService: StatisticOperations =
     new StatisticOperations();
+  private fileHandler: FileHandler = new FileHandler();
   constructor(data: Record<string, any>[] = []) {
     this.data = data;
   }
@@ -429,5 +431,13 @@ export class DataFrame {
       }
     });
     return standardDeviations;
+  }
+
+  toCsv(filePath: string): Promise<void> {
+    return this.fileHandler.writeCsv(this.data, filePath);
+  }
+
+  toJson(filePath: string): Promise<void> {
+    return this.fileHandler.writeJson(this.data, filePath);
   }
 }

@@ -35,6 +35,7 @@ export class JsonHandler {
       }
     });
   }
+
   private processJson(
     filePath: string,
     encoding: string,
@@ -97,5 +98,17 @@ export class JsonHandler {
         return { ...acc, [combinedKey]: value };
       }
     }, {});
+  }
+
+  writeJson(jsonData: Record<string, any>[], filePath: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      fs.writeFile(filePath, JSON.stringify(jsonData), (err) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    });
   }
 }

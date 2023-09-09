@@ -1,5 +1,6 @@
 import { DataFrame } from "./dataFrame";
 import { FileHandler } from "./fileHandler/fileHandler";
+const path = require("path");
 export { DataFrame } from "./dataFrame";
 
 const testJson = async () => {
@@ -31,6 +32,9 @@ const myDataFrame = new DataFrame([
   { name: "David", class: "B", gender: "Male", score: 78, age: 26 },
   { name: "Eva", class: "A", gender: "Female", score: 97, age: 30 },
 ]);
+
+myDataFrame.toCsv(path.join(__dirname, "utf8.csv"));
+myDataFrame.toJson(path.join(__dirname, "utf8.json"));
 
 // Display the complete DataFrame
 console.log("\nDisplay the complete DataFrame\n");
