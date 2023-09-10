@@ -1,0 +1,14 @@
+// Join two DataFrames.
+  join(df: DataFrame, columnName: string): Record<string, any>[] {
+    const df1 = this.data;
+    const df2 = df.data;
+    const joined: Record<string, any>[] = [];
+    df1.forEach((row1) => {
+      df2.forEach((row2) => {
+        if (row1[columnName] === row2[columnName]) {
+          joined.push({ ...row1, ...row2 });
+        }
+      });
+    });
+    return joined;
+  }
