@@ -6,15 +6,15 @@
  * This file exports the {@link DataFrame} and {@link FileHandler} classes.
  *
  */
-import { DataFrame } from "./dataFrame";
+import { DataFrame, MergeMode } from "./dataFrame";
 import { FileHandler } from "./fileHandler/fileHandler";
 const path = require("path");
-export { DataFrame } from "./dataFrame";
+export { DataFrame, MergeMode } from "./dataFrame";
 export { FileHandler } from "./fileHandler/fileHandler";
 
 const testJson = async () => {
   try {
-    let jsonData = await new FileHandler().readJson("/dist/utf8.json");
+    let jsonData = await new FileHandler().readJson("./dist/sample.json");
     const df = new DataFrame(jsonData);
     console.log(df.getData());
   } catch (err) {
@@ -25,7 +25,7 @@ testJson();
 
 const testCsv = async () => {
   try {
-    let csvData = await new FileHandler().readCsv("/tests/files/csv/utf8.csv");
+    let csvData = await new FileHandler().readCsv("./dist/utf8.csv");
     const df = new DataFrame(csvData);
     console.log(df.getData());
   } catch (err) {
@@ -260,3 +260,81 @@ console.log(myDataFrame.standardDeviation("class"));
 /* Find the standard deviation of the complete dataframe*/
 console.log("\nFind the standard deviation of the complete dataframe\n");
 console.log(myDataFrame.standardDeviation());
+
+const testInnerJoin = () => {
+  const sourceDataFrame = new DataFrame([{ id: 1, name: "John Doe" }]);
+
+  const targetDataFrame = new DataFrame([
+    { id: 1, age: 30, email: "john@example.com" },
+    { id: 1, age: 25, email: "john.doe@example.com" },
+    { id: 1, age: 28, email: "johndoe@example.com" },
+    { id: 1, age: 32, email: "johnd@example.com" },
+    { id: 1, age: 35, email: "j.doe@example.com" },
+  ]);
+  sourceDataFrame
+    .join(targetDataFrame, "id", "id", MergeMode.INNER)
+    .displayFirst();
+};
+testInnerJoin();
+
+const testLeftJoin = () => {
+  console.log("\nleft join\n");
+  const sourceData = [
+    { id: 1, name: "John Doe" },
+    { id: 2, name: "Jane Doe" },
+    { id: 3, name: "Bob Smith" },
+    { id: 4, name: "Alice Johnson" },
+    { id: 5, name: "Eve Johnson" },
+  ];
+
+  const targetData = [{ id: 2, age: 30, email: "jane@example.com" }];
+
+  // Create DataFrame instances
+  const sourceDataFrame = new DataFrame(sourceData);
+  const targetDataFrame = new DataFrame(targetData);
+
+  // Perform left join
+  sourceDataFrame
+    .join(targetDataFrame, "id", "id", MergeMode.LEFT)
+    .displayFirst();
+};
+testLeftJoin();
+
+const testRightJoin = () => {
+  console.log("\n RIGHT JOIN \n");
+  const sourceDataFrame = new DataFrame([
+    { id: 1, name: "John" },
+    { id: 2, name: "Jane" },
+    { id: 3, name: "Jim" },
+    { id: 4, name: "Jack" },
+    { id: 5, name: "Jill" },
+  ]);
+  const targetDataFrame = new DataFrame([
+    { id: 1, age: 30 },
+    { id: 3, age: 25 },
+    { id: 5, age: 28 },
+    { id: 6, age: 35 },
+    { id: 7, age: 40 },
+  ]);
+  sourceDataFrame
+    .join(targetDataFrame, "id", "id", MergeMode.RIGHT)
+    .displayFirst();
+};
+testRightJoin();
+
+const testFullJoin = () => {
+  console.log("\nFULL JOIN \n");
+  const sourceDataFrame = new DataFrame([
+    { id: 1, name: "John Doe" },
+    { id: 2, name: "Jane Doe" },
+  ]);
+  const targetDataFrame = new DataFrame([
+    { id: 3, age: 30 },
+    { id: 4, age: 25 },
+  ]);
+
+  sourceDataFrame
+    .join(targetDataFrame, "id", "id", MergeMode.FULL)
+    .displayFirst();
+};
+testFullJoin();

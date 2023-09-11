@@ -397,3 +397,141 @@ myDataFrame.myDataFrame.toJson(path.join(__dirname, "utf8.json"));
 // output
 // A file names ut8.json is generated
 ```
+
+### Advanced Concepts
+
+#### Merging 2 DataFrames
+
+There are 4 possible ways of merging a `DataFrame`
+
+1. Inner Join
+
+Returns records that have matching values in both `DataFrames`
+
+```javascript
+const sourceDataFrame = new DataFrame([
+  { id: 1, name: "John" },
+  { id: 2, name: "Jane" },
+  { id: 3, name: "Jim" },
+  { id: 4, name: "Jack" },
+  { id: 5, name: "Jill" },
+]);
+const targetDataFrame = new DataFrame([
+  { id: 1, age: 30 },
+  { id: 3, age: 25 },
+  { id: 5, age: 28 },
+  { id: 6, age: 35 },
+  { id: 7, age: 40 },
+]);
+sourceDataFrame
+  .join(targetDataFrame, "id", "id", MergeMode.INNER)
+  .displayFirst();
+
+// output
+// [
+//    { id: 1, name: "John", age: 30 },
+//    { id: 3, name: "Jim", age: 25 },
+//    { id: 5, name: "Jill", age: 28 },
+// ]
+```
+
+2. Left Join
+
+Returns all records from the source `DataFrame`, and the matched records from the target `DataFrame`
+
+```javascript
+const sourceDataFrame = new DataFrame([
+  { id: 1, name: "John" },
+  { id: 2, name: "Jane" },
+  { id: 3, name: "Jim" },
+  { id: 4, name: "Jack" },
+  { id: 5, name: "Jill" },
+]);
+const targetDataFrame = new DataFrame([
+  { id: 1, age: 30 },
+  { id: 3, age: 25 },
+  { id: 5, age: 28 },
+  { id: 6, age: 35 },
+  { id: 7, age: 40 },
+]);
+sourceDataFrame
+  .join(targetDataFrame, "id", "id", MergeMode.LEFT)
+  .displayFirst();
+
+// output
+// [
+//    { id: 1, name: "John", age: 30 },
+//    { id: 2, name: "Jane" },
+//    { id: 3, name: "Jim", age: 25 },
+//    { id: 4, name: "Jack" },
+//    { id: 5, name: "Jill", age: 28 },
+// ]
+```
+
+3. Right Join
+
+Returns all records from the target `DataFrame`, and the matched records from the source `DataFrame`
+
+```javascript
+const sourceDataFrame = new DataFrame([
+  { id: 1, name: "John" },
+  { id: 2, name: "Jane" },
+  { id: 3, name: "Jim" },
+  { id: 4, name: "Jack" },
+  { id: 5, name: "Jill" },
+]);
+const targetDataFrame = new DataFrame([
+  { id: 1, age: 30 },
+  { id: 3, age: 25 },
+  { id: 5, age: 28 },
+  { id: 6, age: 35 },
+  { id: 7, age: 40 },
+]);
+sourceDataFrame
+  .join(targetDataFrame, "id", "id", MergeMode.RIGHT)
+  .displayFirst();
+
+// output
+// [
+//    { id: 1, name: "John", age: 30 },
+//    { id: 3, name: "Jim", age: 25 },
+//    { id: 5, name: "Jill", age: 28 },
+//    { id: 6, age: 35 },
+//    { id: 7, age: 40 },
+// ]
+```
+
+4. Full Join
+
+Returns all records when there is a match in either source or target `DataFrame`
+
+```javascript
+const sourceDataFrame = new DataFrame([
+  { id: 1, name: "John" },
+  { id: 2, name: "Jane" },
+  { id: 3, name: "Jim" },
+  { id: 4, name: "Jack" },
+  { id: 5, name: "Jill" },
+]);
+const targetDataFrame = new DataFrame([
+  { id: 1, age: 30 },
+  { id: 3, age: 25 },
+  { id: 5, age: 28 },
+  { id: 6, age: 35 },
+  { id: 7, age: 40 },
+]);
+sourceDataFrame
+  .join(targetDataFrame, "id", "id", MergeMode.RIGHT)
+  .displayFirst();
+
+// output
+// [
+//    { id: 1, name: "John", age: 30 },
+//    { id: 2, name: "Jane" },
+//    { id: 3, name: "Jim", age: 25 },
+//    { id: 4, name: "Jack" },
+//    { id: 5, name: "Jill", age: 28 },
+//    { id: 6, age: 35 },
+//    { id: 7, age: 40 },
+// ]
+```

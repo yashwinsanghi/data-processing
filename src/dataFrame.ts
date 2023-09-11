@@ -5,7 +5,8 @@ import {
   fetchDataTypeForGivenData,
   findKeysByValue,
 } from "./util";
-import { AdvancedOperations, MergeModes } from "./advanced/advanced";
+import { AdvancedOperations, MergeMode } from "./advanced/advanced";
+export { MergeMode } from "./advanced/advanced";
 
 /**
  * @class DataFrame
@@ -15,10 +16,12 @@ import { AdvancedOperations, MergeModes } from "./advanced/advanced";
  * 1. Store data in the form of Records with string keys and any values.
  * 2. Perform Statistical Operation like mean, mode, median, standard deviation , etc on numberic data
  * 3. Perform Data Manipulation Operations like filter, groupBy, aggregate, etc.
+ * 4. Perform Advanced Data Manipulation Operations like merge,
  *
  * @remarks
  * This class uses {@link StatisticOperations} (see {@link StatisticOperations}) for statistical operations
- * and {@link FileHandler} (see {@link FileHandler}) for file handling operations.
+ * , {@link FileHandler} (see {@link FileHandler}) for file handling operations
+ * and {@link AdvancedOperations} (see {@link AdvancedOperations}) for advanced operations.
  */
 export class DataFrame {
   private data: Record<string, any>[] = [];
@@ -667,5 +670,37 @@ export class DataFrame {
    */
   toJson(filePath: string): Promise<void> {
     return this.fileHandler.writeJson(this.data, filePath);
+  }
+
+  /**
+   * The function joins two dataframes based on specified columns and merge mode.
+   * @param {DataFrame} df - The `df` parameter is a DataFrame object that represents the data frame
+   * that you want to join with the current data frame.
+   * @param {string | string[]} sourceColumns - The sourceColumns parameter is used to specify the
+   * columns in the current DataFrame that will be used as the key for the join operation. It can be
+   * either a single string representing a column name or an array of strings representing multiple
+   * column names. These columns will be used to match the corresponding columns in the target
+   * @param {string | string[]} targetColumns - The `targetColumns` parameter is used to specify the
+   * columns in the target DataFrame that will be used for merging. It can be a single column name as a
+   * string, or a list of column names as an array.
+   * @param {MergeMode} mergeMode - The mergeMode parameter specifies how the join operation should be
+   * performed. It can take one of the following values:
+   * @returns A new DataFrame object is being returned.
+   */
+  join(
+    df: DataFrame,
+    sourceColumn: string,
+    targetColumn: string,
+    mergeMode: MergeMode
+  ): DataFrame {
+    return new DataFrame(
+      this.advancedOperations.merge(
+        this.data,
+        df.getData(),
+        sourceColumn,
+        targetColumn,
+        mergeMode
+      )
+    );
   }
 }

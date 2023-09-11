@@ -24,17 +24,19 @@ Key Highlights:</p>
 <li>Store data in the form of Records with string keys and any values.</li>
 <li>Perform Statistical Operation like mean, mode, median, standard deviation , etc on numberic data</li>
 <li>Perform Data Manipulation Operations like filter, groupBy, aggregate, etc.</li>
+<li>Perform Advanced Data Manipulation Operations like merge,</li>
 </ol>
 
 <h4>Remarks</h4><p>This class uses StatisticOperations (see StatisticOperations) for statistical operations
-and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a>) for file handling operations.</p>
+, <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a>) for file handling operations
+and AdvancedOperations (see AdvancedOperations) for advanced operations.</p>
 </div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
 <li><span class="target">DataFrame</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L22">dataFrame.ts:22</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L26">dataFrame.ts:26</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -46,7 +48,8 @@ and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="dataFrame.DataFrame.html#data" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>data</span></a>
+<div class="tsd-index-list"><a href="dataFrame.DataFrame.html#advancedOperations" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>advanced<wbr/>Operations</span></a>
+<a href="dataFrame.DataFrame.html#data" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>data</span></a>
 <a href="dataFrame.DataFrame.html#fileHandler" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>file<wbr/>Handler</span></a>
 <a href="dataFrame.DataFrame.html#statisticsOperationService" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>statistics<wbr/>Operation<wbr/>Service</span></a>
 </div></section>
@@ -63,6 +66,7 @@ and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see
 <a href="dataFrame.DataFrame.html#filter" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>filter</span></a>
 <a href="dataFrame.DataFrame.html#getData" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Data</span></a>
 <a href="dataFrame.DataFrame.html#groupBy" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>group<wbr/>By</span></a>
+<a href="dataFrame.DataFrame.html#join" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>join</span></a>
 <a href="dataFrame.DataFrame.html#max" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>max</span></a>
 <a href="dataFrame.DataFrame.html#mean" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>mean</span></a>
 <a href="dataFrame.DataFrame.html#median" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>median</span></a>
@@ -92,14 +96,23 @@ and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see
 <h5><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="dataFrame.DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L38">dataFrame.ts:38</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L49">dataFrame.ts:49</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
+<section class="tsd-panel tsd-member tsd-is-private"><a id="advancedOperations" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>advanced<wbr/>Operations</span><a href="#advancedOperations" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">advanced<wbr/>Operations</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AdvancedOperations</span><span class="tsd-signature-symbol"> = ...</span></div>
+<div class="tsd-comment tsd-typography">
+<h4>Memberof</h4><p>DataFrame</p>
+
+<h4>Instance</h4></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L47">dataFrame.ts:47</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="data" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>data</span><a href="#data" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L23">dataFrame.ts:23</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L27">dataFrame.ts:27</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="fileHandler" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>file<wbr/>Handler</span><a href="#fileHandler" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">file<wbr/>Handler</span><span class="tsd-signature-symbol">:</span> <a href="index.FileHandler.html" class="tsd-signature-type tsd-kind-class">FileHandler</a><span class="tsd-signature-symbol"> = ...</span></div>
@@ -108,7 +121,7 @@ and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see
 
 <h4>Instance</h4></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L36">dataFrame.ts:36</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L40">dataFrame.ts:40</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="statisticsOperationService" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>statistics<wbr/>Operation<wbr/>Service</span><a href="#statisticsOperationService" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">statistics<wbr/>Operation<wbr/>Service</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StatisticOperations</span><span class="tsd-signature-symbol"> = ...</span></div>
@@ -117,7 +130,7 @@ and <a href="index.FileHandler.html" class="tsd-kind-class">FileHandler</a> (see
 
 <h4>Instance</h4></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L29">dataFrame.ts:29</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L33">dataFrame.ts:33</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member"><a id="aggregate" class="tsd-anchor"></a>
@@ -165,7 +178,7 @@ each group.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L282">dataFrame.ts:282</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L293">dataFrame.ts:293</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="count" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>count</span><a href="#count" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -189,7 +202,7 @@ their respective counts.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L346">dataFrame.ts:346</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L357">dataFrame.ts:357</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="dataTypes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>data<wbr/>Types</span><a href="#dataTypes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -201,7 +214,7 @@ their respective counts.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L107">dataFrame.ts:107</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L118">dataFrame.ts:118</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="display" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>display</span><a href="#display" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -221,7 +234,7 @@ the &quot;DataFrame&quot;. The default value is 5.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L74">dataFrame.ts:74</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L85">dataFrame.ts:85</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="displayAll" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>display<wbr/>All</span><a href="#displayAll" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -232,7 +245,7 @@ the &quot;DataFrame&quot;. The default value is 5.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L54">dataFrame.ts:54</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L65">dataFrame.ts:65</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="displayFirst" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>display<wbr/>First</span><a href="#displayFirst" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -252,7 +265,7 @@ display. By default, it is set to 5.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L64">dataFrame.ts:64</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L75">dataFrame.ts:75</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="displayLast" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>display<wbr/>Last</span><a href="#displayLast" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -273,7 +286,7 @@ calling the <code>displayLast</code> function.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L86">dataFrame.ts:86</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L97">dataFrame.ts:97</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="dropColumn" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>drop<wbr/>Column</span><a href="#dropColumn" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -293,7 +306,7 @@ the column that you want to remove from the &quot;DataFrame&quot;.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L139">dataFrame.ts:139</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L150">dataFrame.ts:150</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="filter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filter</span><a href="#filter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -328,7 +341,7 @@ filtered &quot;DataFrame&quot;.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L184">dataFrame.ts:184</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L195">dataFrame.ts:195</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="getData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Data</span><a href="#getData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -340,7 +353,7 @@ filtered &quot;DataFrame&quot;.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L47">dataFrame.ts:47</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L58">dataFrame.ts:58</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="groupBy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>group<wbr/>By</span><a href="#groupBy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -364,7 +377,38 @@ are strings and the values can be of any type.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L250">dataFrame.ts:250</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L261">dataFrame.ts:261</a></li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member"><a id="join" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>join</span><a href="#join" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="tsd-signature tsd-anchor-link" id="join.join-1"><span class="tsd-kind-call-signature">join</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">df</span>, <span class="tsd-kind-parameter">sourceColumn</span>, <span class="tsd-kind-parameter">targetColumn</span>, <span class="tsd-kind-parameter">mergeMode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="dataFrame.DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a><a href="#join.join-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>The function joins two dataframes based on specified columns and merge mode.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><span class="tsd-kind-parameter">df</span>: <a href="dataFrame.DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h5>
+<div class="tsd-comment tsd-typography"><p>The <code>df</code> parameter is a DataFrame object that represents the data frame
+that you want to join with the current data frame.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><span class="tsd-kind-parameter">sourceColumn</span>: <span class="tsd-signature-type">string</span></h5></li>
+<li>
+<h5><span class="tsd-kind-parameter">targetColumn</span>: <span class="tsd-signature-type">string</span></h5></li>
+<li>
+<h5><span class="tsd-kind-parameter">mergeMode</span>: <a href="../enums/index.MergeMode.html" class="tsd-signature-type tsd-kind-enum">MergeMode</a></h5>
+<div class="tsd-comment tsd-typography"><p>The mergeMode parameter specifies how the join operation should be
+performed. It can take one of the following values:</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="dataFrame.DataFrame.html" class="tsd-signature-type tsd-kind-class">DataFrame</a></h4><p>A new DataFrame object is being returned.</p>
+
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L690">dataFrame.ts:690</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="max" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>max</span><a href="#max" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -389,7 +433,7 @@ the maximum values for each column.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L416">dataFrame.ts:416</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L427">dataFrame.ts:427</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="mean" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mean</span><a href="#mean" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -413,7 +457,7 @@ where the keys are strings and the values are numbers.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L454">dataFrame.ts:454</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L465">dataFrame.ts:465</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="median" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>median</span><a href="#median" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -437,7 +481,7 @@ as keys and the corresponding medians as values.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L492">dataFrame.ts:492</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L503">dataFrame.ts:503</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="min" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>min</span><a href="#min" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -461,7 +505,7 @@ their respective minimum values.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L378">dataFrame.ts:378</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L389">dataFrame.ts:389</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="mode" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mode</span><a href="#mode" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -487,7 +531,7 @@ values.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L532">dataFrame.ts:532</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L543">dataFrame.ts:543</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="renameColumns" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rename<wbr/>Columns</span><a href="#renameColumns" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -509,7 +553,7 @@ corresponding value represents the new column name.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L119">dataFrame.ts:119</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L130">dataFrame.ts:130</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="selectColumns" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>select<wbr/>Columns</span><a href="#selectColumns" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -532,7 +576,7 @@ an array of strings, it represents multiple column names in the &quot;DataFrame&
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L156">dataFrame.ts:156</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L167">dataFrame.ts:167</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="shape" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>shape</span><a href="#shape" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -549,7 +593,7 @@ an array of strings, it represents multiple column names in the &quot;DataFrame&
 <h5><span class="tsd-kind-property">rows</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li></ul>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L95">dataFrame.ts:95</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L106">dataFrame.ts:106</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="sort" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sort</span><a href="#sort" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -599,7 +643,7 @@ provided, the sorting is done using the default comparison of column values.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L203">dataFrame.ts:203</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L214">dataFrame.ts:214</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="standardDeviation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>standard<wbr/>Deviation</span><a href="#standardDeviation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -625,7 +669,7 @@ corresponding standard deviation values.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L616">dataFrame.ts:616</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L627">dataFrame.ts:627</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="sum" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sum</span><a href="#sum" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -649,7 +693,7 @@ their respective sums.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L309">dataFrame.ts:309</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L320">dataFrame.ts:320</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="toCsv" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>Csv</span><a href="#toCsv" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -670,7 +714,7 @@ to.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L650">dataFrame.ts:650</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L661">dataFrame.ts:661</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="toJson" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>to<wbr/>Json</span><a href="#toJson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -691,7 +735,7 @@ to.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L660">dataFrame.ts:660</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L671">dataFrame.ts:671</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="variance" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>variance</span><a href="#variance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -715,7 +759,7 @@ The object has column names as keys and the variance as values.</p>
 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/3d56a5e/src/dataFrame.ts#L576">dataFrame.ts:576</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/yashwinsanghi/data-processing/blob/9025b30/src/dataFrame.ts#L587">dataFrame.ts:587</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -736,6 +780,7 @@ The object has column names as keys and the variance as values.</p>
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
+<li><a href="#advancedOperations" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>advanced<wbr/>Operations</span></a></li>
 <li><a href="#data" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>data</span></a></li>
 <li><a href="#fileHandler" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>file<wbr/>Handler</span></a></li>
 <li><a href="#statisticsOperationService" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>statistics<wbr/>Operation<wbr/>Service</span></a></li>
@@ -750,6 +795,7 @@ The object has column names as keys and the variance as values.</p>
 <li><a href="#filter" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>filter</span></a></li>
 <li><a href="#getData" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>get<wbr/>Data</span></a></li>
 <li><a href="#groupBy" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>group<wbr/>By</span></a></li>
+<li><a href="#join" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>join</span></a></li>
 <li><a href="#max" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>max</span></a></li>
 <li><a href="#mean" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>mean</span></a></li>
 <li><a href="#median" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-2048"></use></svg><span>median</span></a></li>
